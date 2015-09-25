@@ -1,13 +1,13 @@
 # Site settings
 
-url: "http://panossakkos.github.io"
-title: "{ Panos Sakkos }"
-description: "Blog and website of Panos Sakkos, blogging mainly for tech. Opinions expressed are mine."
-keywords: "panos, sakkos, panos sakkos, technology, computer science, Pwn Mail, WriteRight, UoA, di, CERN, MDCN, Microsoft"
+url: "https://www.sacreddata.io"
+title: "{ Sacred Data Media Partners }"
+description: "Media is our practice. Data is our religion."
+keywords: "sacred, data, sacred data, sacred data media partners, media partners, digital media, consulting, media, encoding, video, audio, multimedia"
 favicon: "/img/favicon.ico"
 black-favicon: "/img/black-lab-glass.ico"
-google-tracking-id: "UA-35880426-3"
-disqus-shortname: "panossakkos"
+google-tracking-id: "UA-68128125-1"
+#disqus-shortname: "panossakkos"
 
 # Navigation bar links
 # Blog link in the blog and post pages will point to the blog.html#blog
@@ -16,7 +16,7 @@ disqus-shortname: "panossakkos"
 pages_list:
   About: 'about'
   Blog: 'blog'
-  Career: 'career'
+  People: 'career'
   Contact: 'contact'
 
 background-img: "/img/intro-bg.jpg"
