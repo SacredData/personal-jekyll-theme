@@ -16,7 +16,7 @@ google-tracking-id: "UA-68128125-1"
 pages_list:
   About: 'about'
   Partners: 'partners'
-  Blog: 'blog'
+#  Blog: 'blog'
   Contact: 'contact'
 
 background-img: "/img/intro-bg.jpg"
@@ -31,12 +31,12 @@ events:
   - image: "/img/career/andrew.jpeg"
     date: "Andrew Grathwohl"
     description: "Head Partner"
-  - image: "/img/career/pwnmail.jpg"
+  - image: "/img/career/garrett.jpg"
     date: "Garrett Semmelink"
     description: "Client Relations"
-#  - image: "/img/career/uoa.jpg"
-#    date: "Benjamin Horvath"
-#    description: "Data Science"
+  - image: "/img/career/ben.jpg"
+    date: "Benjamin Horvath"
+    description: "Data Science"
 #  - image: "/img/career/phil.jpg"
 #    date: "Philip Bernstein"
 #    description: "Mobile Applications"
@@ -51,11 +51,11 @@ events:
 career-img: "/img/career/default.jpg"
 
 # Blog variables
-paginate: 15
+#paginate: 15
 
-paginate_path: "blog/page:num"
+#paginate_path: "blog/page:num"
 
-post-preview-words: 128
+#post-preview-words: 128
 
 fb-share: True
 twitter-share: True
