@@ -1,0 +1,24 @@
+---
+layout: post
+section-type: post
+title: "Using fluent-ffmpeg to QA video"
+category: video
+tags: [ 'ffmpeg' ]
+---
+This article will outline how to return QA results from successfully-executed FFmpeg commands in about 10 minutes. Using this technique allows a company to examine its video transcoding strategies objectively, allowing for more targeted improvements to the transcoding system's backend code.
+
+There are a chock-full of ways to automate the quality assurance of digital video. However, the tried-and-true measurement for objective coding fidelity is the **[PSNR](https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio)** - peak signal-to-noise ratio. In essence, it's a measurement of how similar the frame you're transcoding is to the source frame. It is expressed in decibels, and 40dB is typically the magic number to strive for in lossy media compression use cases.
+
+Using the [fluent-ffmpeg package](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg) for node, it is quite easy to setup an FFmpeg transcoding instance that logs these measurements in real-time.
+
+See [my gist](https://gist.github.com/agrathwohl/de196546f748ede5b7c5#file-psnr_ffmpeg-js) for some example code. It will download a movie from my personal server, and then perform an acceptable transcode from an H.264 MP4 with AAC audio to a VP8/OPUS WebM container file.
+
+Running this code with today's [FFmpeg nightly build](http://johnvansickle.com/ffmpeg/), I was getting a result of around 43dB, which is right where we want to be for most lossy streaming environments. But supposing we wanted to get an even lower bitrate than 1Mbit, the PSNR results we've just achieved serve as a great way to test out some new encoding settings.
+
+Changing the bitrate from 1Mbit to 468kbps yielded a PSNR of 38.82dB. Not bad, but the picture quality *is* a bit noticeably worse.
+
+So, let's try raising our bitrate closer to a sane level. Next, we'll try 768kbps. This time, we yielded a PSNR of 41.58dB. This is more ideal - we've reduced the bitrate by approximately one-quarter and we're still in the high-quality conversion territory. Can we go even lower without breaking beneath 40dB?
+
+Yes, we can! Bringing the bitrate down to 640kbps yielded a PSNR of 40.57dB, which I'm quite pleased with. Using the PSNR scores output by FFmpeg, I just optimized my computer's VP8 encoding operation in a very expedient, yet empirical, fashion.
+
+![Comparing 640kbps and 768kbps](http://i.imgur.com/pujHsL2.png)
