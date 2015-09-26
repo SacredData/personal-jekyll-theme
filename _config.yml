@@ -15,8 +15,8 @@ google-tracking-id: "UA-68128125-1"
 
 pages_list:
   About: 'about'
+  Partners: 'partners'
   Blog: 'blog'
-  People: 'people'
   Contact: 'contact'
 
 background-img: "/img/intro-bg.jpg"
@@ -24,17 +24,6 @@ background-img: "/img/intro-bg.jpg"
 # About variables
 
 me-img: "/img/me.jpg"
-
-# Blog variables
-paginate: 15
-
-paginate_path: "blog/page:num"
-
-post-preview-words: 128
-
-fb-share: True
-twitter-share: True
-reddit-share: True
 
 # Career variables
 
@@ -60,6 +49,17 @@ events:
 
 # First image of the Career timeline
 career-img: "/img/career/default.jpg"
+
+# Blog variables
+paginate: 15
+
+paginate_path: "blog/page:num"
+
+post-preview-words: 128
+
+fb-share: True
+twitter-share: True
+reddit-share: True
 
 # Social networks variables (many more available: facebook, flickr, dribbble, pinterest, instagram, tumblr etc.)
 social:
