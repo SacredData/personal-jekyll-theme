@@ -30,7 +30,7 @@ me-img: "/img/me.jpg"
 events:
   - image: "/img/career/andrew.jpeg"
     date: "Andrew Grathwohl"
-    description: "Head Partner"
+    description: "Managing Partner"
   - image: "/img/career/garrett.jpg"
     date: "Garrett Semmelink"
     description: "Client Relations"
