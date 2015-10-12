@@ -67,6 +67,8 @@ social:
     url: "/feed.xml"
   - title: "github"
     url: "https://github.com/SacredData/"
+  - title: "twitter"
+    url: "http://www.twitter.com/SacredData/"
 #  - title: "linkedin"
 #    url: "http://no.linkedin.com/in/PanosSakkos"
 #  - title: "youtube"
